@@ -61,10 +61,15 @@ class TranscriptionTest extends TestCase
         $transcription = Transcription::load(__DIR__ . '/stubs/basic-example.vtt');
 
         $expected = <<<EOT
-<a href="?time=00:03">Here is a,</a>
-<a href="?time=00:04">Example of a VVT file.</a>
-EOT;
+            <a href="?time=00:03">Here is a,</a>
+            <a href="?time=00:04">Example of a VVT file.</a>
+            EOT;
 
         $this->assertEquals($expected, $transcription->htmlLines());
+    }
+
+    function x(): string
+    {
+        return "x";
     }
 }
